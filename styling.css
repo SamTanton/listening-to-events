@@ -10,8 +10,26 @@ body {
     margin-bottom: 50px;
 }
 
+.innerbutton {
+    height: 100px;
+    width: 250px;
+    position: relative;
+    top: 50px; 
+    z-index: 5;
+}
 .topBox{
     height: 100px;
     width: 400px;
     text-align: center; 
+}
+.box {
+    height: 200px;
+    width: 400px;
+    background-color: rgb(213, 213, 213);
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+    top: -100px;
+    z-index: 1;
+    text-align: center;
 }
