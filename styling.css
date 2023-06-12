@@ -1,0 +1,17 @@
+body {
+    display: grid;
+    place-items: center;
+}
+.outerbutton {
+    height: 100px;
+    width: 250px;
+    position: relative;
+    top: -50px;
+    margin-bottom: 50px;
+}
+
+.topBox{
+    height: 100px;
+    width: 400px;
+    text-align: center; 
+}
