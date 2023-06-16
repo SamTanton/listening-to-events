@@ -1,0 +1,33 @@
+body {
+    display: grid;
+    place-items: center;
+}
+
+button{
+    height: 100px;
+    width: 250px;
+    position: relative;
+}
+
+.outerbutton {
+    top: -150px;
+    margin-bottom: 50px;
+}
+
+.innerbutton {
+    top: -50px; 
+    z-index: 1;
+}
+div{
+    height: 200px;
+    width: 400px;
+    text-align: center; 
+    position: relative;
+}
+
+.bottomBox {
+    border: 1px solid;
+    border-radius: 5px;
+    top: -200px;
+    background-color: rgb(213, 213, 213);
+}
