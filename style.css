@@ -31,11 +31,17 @@ div{
     top: -250px;
     background-color: rgb(213, 213, 213);
 }
-.circle {
+
+.circleShape {
     height: 200px;
     width: 200px;
     background-color: white;
     border: 1px solid black;
     border-radius: 100px;
     top: -200px;
+}
+
+.circleShape p {
+    position: relative;
+    top: 30%;
 }
