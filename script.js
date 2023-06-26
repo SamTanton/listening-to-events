@@ -1,31 +1,25 @@
-const outerbutton = document.querySelector(".outerbutton")
-
-outerbutton.addEventListener("click", () => {
-    const topBox = document.querySelector(".topBox")
+function changeColour (colourTarget, textTarget) {
     const randomColour = Math.floor(Math.random()*16777215).toString(16);
-    document.body.style.backgroundColor = `#${randomColour}`;
-    topBox.innerHTML = `#${randomColour}`;
-})
+    colourTarget.style.backgroundColor = `#${randomColour}`;
+    textTarget.innerHTML = `#${randomColour}`;
+}
 
-const innerbutton = document.querySelector(".innerbutton")
-
-innerbutton.addEventListener("click", () => {
-    const box = document.querySelector(".bottomBox")
-    const randomColour = Math.floor(Math.random()*16777215).toString(16);
-    box.style.backgroundColor = `#${randomColour}`;
-    box.innerHTML = `#${randomColour}`;
+document.querySelector(".outerbutton").addEventListener("click", () => {
+    changeColour(document.body, document.querySelector(".topBox"))
+ })
+document.querySelector(".innerbutton").addEventListener("click", () => {
+    changeColour(document.querySelector(".bottomBox"), document.querySelector(".bottomBox"))
 })
 
 const circleShape = document.querySelector(".circleShape")
+function circleChange (message, colour) {
+    document.querySelector(".circleText").innerText = message;
+        circleShape.style.backgroundColor = colour;
+}
 
-const circleText = document.querySelector(".circleText")
-
-circleShape.addEventListener("mouseover", () => {
-    circleText.innerText = `You are inside me!`;
-    circleShape.style.backgroundColor = `#53FFFB`;
+circleShape.addEventListener(`mouseover`, () => {
+    circleChange (`You are inside me!`, `#53FFFB`)
 })
-
-circleShape.addEventListener("mouseout", () => {
-    circleText.innerText = `Please get inside me again! I miss you`;
-    circleShape.style.backgroundColor = `#9aade1`;
+circleShape.addEventListener(`mouseout`, () => {
+    circleChange (`Please come back! I miss you`, `#9AADE1`)
 })
